@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>文件监听工具</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <style>
+  .input-group{
+    margin-top:20px;
+  }
+  .log-box{
+    width:100%;
+    height:300px;
+    overflow-y:scroll;
+    background:#333333; 
+    color: rgb(245, 245, 220);
+    padding:3px;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  .log-title{
+    margin-top:10px;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="input-group">
+      <span id="chooseSource" class="input-group-addon glyphicon glyphicon-folder-open"></span>
+      <input id="sourceDir" type="text" class="form-control" disabled placeholder="选择sources中static文件夹"
+        aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group">
+      <span id="chooseTarget" class="input-group-addon glyphicon glyphicon-folder-open"></span>
+      <input id="targetDir" type="text" class="form-control" disabled placeholder="选择target中static文件夹"
+        aria-describedby="basic-addon1">
+    </div>
+    <div class="checkbox">
+      <label>
+        <input id="log" checked type="checkbox">打印日志
+      </label>
+    </div>
+    <button id="start" type="button" class="btn btn-primary">点击开始</button>
+    <p class="log-title">文件监听日志：</p>
+    <div class="log-box">
+    
+    </div>
+    <div class="alert alert-success">说明：此工具用于监听指定文件夹，产生任何文件变化时，复制变化的文件到目标文件夹</div>
+  </div>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./renderer.js"></script>
+</body>
+
+</html>

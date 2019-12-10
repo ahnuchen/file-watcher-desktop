@@ -1,0 +1,15 @@
+{
+  "name": "file-listener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "package": "electron-packager ./src --out ./dist --electron-version 6.0.0 --overwrite --icon=./favicon.ico",
+    "pac": "electron-packager ./src --all"
+  },
+  "author": "ccy",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-packager": "^14.0.4"
+  }
+}
